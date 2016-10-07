@@ -11,13 +11,14 @@ gem 'turbolinks'  , '~> 5'
 gem 'tzinfo-data' , '~> 1.2016', '>= 1.2016.6'
 
 group :development, :test do
-  gem 'dotenv', '~> 2.1', '>= 2.1.1'
-  gem 'byebug', '~> 9.0', '>= 9.0.6'
-end
-
-group :development do
+  gem 'rspec-rails'          , '~> 3.4', '>= 3.4.2'
+  gem 'factory_girl_rails'   , '~> 4.7'
+  gem 'database_cleaner'     , '~> 1.5', '>= 1.5.3'
+  gem 'faker'                , '~> 1.6', '>= 1.6.6'
+  gem 'dotenv-rails'         , '~> 2.1', '>= 2.1.1'
+  gem 'byebug'               , '~> 9.0', '>= 9.0.6'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-ruby "2.3.1"
+ruby '2.3.1'
