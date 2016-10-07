@@ -1,0 +1,20 @@
++ Features:
+  - Create account
+  - Sign in
+  - Edit user account
+  - Forgot password
+  - 'Remember me'
+  ================================
+  - Cucumber for integration tests
+    >
+  - RSpec for unit testing (test user model)
+  ================================
+  - No model can be deleted/destroyed
+  - Roles (:admin, :regular, :customer_service, etc?)
++ Helpful resources:
+  - Test-driven Rails with RSpec, Capybara, and Cucumber: https://app.pluralsight.com/library/courses/test-driven-rails-rspec-capybara-cucumber/table-of-contents
+  - Getting Started with Rails 5.x on Heroku: https://devcenter.heroku.com/articles/getting-started-with-rails5
+  - Starter app for rails-devise: https://github.com/RailsApps/rails-devise
+  - Role based authorization: https://github.com/CanCanCommunity/cancancan
+  - Authentication: https://github.com/plataformatec/devise
+  - Soft Delete: https://github.com/rubysherpas/paranoia
