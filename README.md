@@ -16,11 +16,23 @@ Rails 5 example application that provides user management, authentication, and s
 ```
   - Start the server: ``bundle exec rails s``
 
-## Running Tests
+## Running Tests Setup
   - Database setup:
 ``` bash
-  bundle exec rake db:create
   bundle exec rake db:migrate
   bundle exec rake db:test:prepare
 ```
-  - Run ``rspec`` to run all application specs or ``rspec path/to/file_spec.rb`` to run a specific set of specs.
+## Running Integration tests:
+  - Run ``cucumber`` to run all tests
+  - Only run scenarios with tag @wip
+```
+cucumber --profile wip
+```
+  - Run a single scenario
+```
+  bundle exec cucumber /path/to/file.feature:9
+```
+
+## Running unit tests:
+  - Run ``rspec`` to run all application specs
+  - Run ``rspec path/to/file_spec.rb`` to run a specific set of specs

@@ -6,7 +6,7 @@ development:
   username: <%= ENV['DB_DEV_USERNAME'] %>
   password: <%= ENV['DB_DEV_PASSWORD'] %>
 
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: <%= ENV['DB_TEST_NAME'] %>
@@ -16,3 +16,6 @@ test:
 
 production:
   url: <%= ENV['DB_PROD_URL'] %>
+
+cucumber:
+  <<: *test
