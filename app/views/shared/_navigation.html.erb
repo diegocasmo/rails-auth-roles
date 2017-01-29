@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to(root_path, {:class => 'navbar-brand'}) do %>
+          <img alt="Brand" height="20" src="http://rubyonrails.org/images/rails-logo.svg">
+      <% end %>
+    </div>
+
+    <ul class="nav navbar-nav navbar-left">
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to('Edit Profile', edit_user_registration_path) %>
+        <% end %>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

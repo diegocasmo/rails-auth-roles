@@ -4,11 +4,19 @@
     <title>AuthRoles</title>
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container">
+      <%= render 'shared/navigation' %>
+      <%= render 'shared/messages' %>
+      <%= yield %>
+    </div>
+
+    <%= javascript_tag '$.fx.off = true;' if Rails.env.test? %>
   </body>
 </html>
