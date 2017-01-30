@@ -1,5 +1,0 @@
-+ Helpful resources:
-  - Rails Devise Roles: https://github.com/RailsApps/rails-devise-roles
-  - Starter app for rails-devise: https://github.com/RailsApps/rails-devise
-  - Role based authorization: https://github.com/CanCanCommunity/cancancan
-  - Soft Delete: https://github.com/rubysherpas/paranoia

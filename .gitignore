@@ -76,3 +76,6 @@ GitHub.sublime-settings
 
 # Ignore environment variables
 .env
+
+# Ignore files created while running tests
+spec/test_files/**/*

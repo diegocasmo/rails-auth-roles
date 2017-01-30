@@ -1,0 +1,7 @@
+<h2><%= user.email %></h2>
+<ul class="reset-ul">
+  <% user.pictures.each do |picture| %>
+    <li class="li-inline"><img src="<%= if Rails.env.test? then '' else picture.image.url(:square) end %>" alt=""></li>
+  <% end %>
+</ul>
+

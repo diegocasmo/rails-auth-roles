@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # Devise routes
   devise_for :users, skip: :registrations
   devise_scope :user do
     resource :registration,
@@ -10,6 +11,11 @@ Rails.application.routes.draw do
         get :cancel
       end
   end
+
+  # Picture routes
+  get '/pictures/new', to: 'pictures#new'
+  post '/pictures/new', to: 'pictures#create'
+
   root to: 'home#get'
 end
 

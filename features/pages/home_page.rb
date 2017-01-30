@@ -20,4 +20,9 @@ class HomePage
     expect(URI.parse(current_url).path).to eq('/users/sign_in')
     expect(page.find('.alert.alert-warning').text()).to eq(I18n.t('devise.failure.unauthenticated'))
   end
+
+  def self.verify_successful_picture_upload
+    expect(URI.parse(current_url).path).to eq('/')
+    expect(page.find('.alert.alert-info').text()).to eq('Picture was successfully created.')
+  end
 end

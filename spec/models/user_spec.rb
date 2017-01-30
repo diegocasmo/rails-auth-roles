@@ -44,4 +44,19 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe 'Scopes' do
+
+    describe 'with_pictures' do
+
+      it 'should only return users with pictures' do
+        create(:user) do |user|
+          user.pictures.create(attributes_for(:picture))
+        end
+        create(:user)
+        expect(User.count).to eq(2)
+        expect(User.with_pictures.count).to eq(1)
+      end
+    end
+  end
 end
