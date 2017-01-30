@@ -10,6 +10,8 @@ gem 'jquery-rails', '~> 4.2', '>= 4.2.1'
 gem 'turbolinks'  , '~> 5'
 gem 'tzinfo-data' , '~> 1.2016', '>= 1.2016.6'
 gem 'devise'      , '~> 4.2'
+gem 'paperclip'
+gem 'aws-sdk'     , '~> 2.3'
 
 group :development, :test do
   gem 'rspec-rails'            , '~> 3.4', '>= 3.4.2'

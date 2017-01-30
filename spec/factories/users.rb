@@ -1,6 +1,8 @@
 FactoryGirl.define do
+
   factory :user do
-    email    Faker::Internet.safe_email
+    # Avoid duplicate emails by chance
+    sequence(:email) { |n| "#{n}_foo@foo.foo" }
     password 'password'
   end
 end

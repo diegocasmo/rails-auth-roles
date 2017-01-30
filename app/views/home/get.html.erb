@@ -1,1 +1,12 @@
-<h1>Welcome <%= current_user.email %></h1>
+<h1>User favorite pictures</h1>
+<% if @users.any? %>
+  <ul class="reset-ul">
+    <% @users.each do |user| %>
+      <li>
+        <%= render 'shared/pictures', user: user%>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no pictures to show</p>
+<% end %>

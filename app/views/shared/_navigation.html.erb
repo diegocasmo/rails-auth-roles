@@ -7,21 +7,26 @@
     </div>
 
     <ul class="nav navbar-nav navbar-left">
-      <li>
-        <% if user_signed_in? %>
-          <%= link_to('Edit Profile', edit_user_registration_path) %>
-        <% end %>
-      </li>
+      <% if user_signed_in? %>
+        <li>
+            <%= link_to('Upload Picture', pictures_new_path) %>
+        </li>
+      <% end %>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li>
-        <% if user_signed_in? %>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to('Edit Profile', edit_user_registration_path) %>
+        </li>
+        <li>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        <% else %>
+        </li>
+      <% else %>
+        <li>
           <%= link_to('Login', new_user_session_path) %>
-        <% end %>
-      </li>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>
